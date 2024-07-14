@@ -1,0 +1,199 @@
+.App {
+  text-align: center;
+  color: azure;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.circles-container {
+  position: relative;
+  width: 400px; /* Adjust width as needed */
+  height: 400px; /* Adjust height as needed */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.circle {
+  position: absolute;
+  width: 150px; /* Circle size */
+  height: 150px; /* Circle size */
+  border-radius: 50%;
+  background-color: white; /* Adjust color as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 2; /* Ensure circles are above lines */
+}
+
+.circle1 {
+  top: 0; 
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url('bread.jpg'); /* Replace with your image */
+  background-size: cover;
+}
+
+.circle2 {
+  bottom: 0; 
+  top: 300px;
+  left: 330px; 
+  background-image: url('jelly.png'); /* Replace with your image */
+  background-size: cover;
+}
+
+.circle3 {
+  bottom: 0; 
+  top: 300px;
+  right: 330px; 
+  background-image: url('peanut.png'); /* Replace with your image */
+  background-size: cover;
+}
+
+.circle:hover {
+  border: 2px solid #3498db; /* Example hover effect */
+}
+
+.chosen {
+  border: 2px solid green; /* Example selected effect */
+}
+
+.line {
+  position: absolute;
+  background-color: white; /* Line color */
+  z-index: 1; /* Ensure lines are behind circles */
+}
+
+.line1 {
+  width: 2px;
+  height: 450px; 
+  top: 195px; 
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg);
+}
+
+.line2 {
+  width: 2px;
+  height: 280px; 
+  bottom: 0px;
+  top: 90px;
+  left: 35%;
+  transform: rotate(30deg);
+  transform-origin: top left;
+}
+
+.line3 {
+  width: 2px;
+  height: 280px; 
+  bottom: 0px; 
+  top: 90px;
+  right: 35%; 
+  transform: rotate(-30deg);
+  transform-origin: top right;
+}
+
+.result {
+  position: absolute;
+  top: 500px; 
+  left: 46%;
+  transform: translateX(-50%);
+  text-align: center;
+  white-space: nowrap; 
+}
+
+.win-text {
+  color: #2ecc71;
+}
+
+.lose-text {
+  color: #e74c3c;
+}
+
+.draw-text {
+  color: #f39c12;
+}
+
+.choices {
+  position: absolute;
+  top: -60%;
+  left: -25px;
+  transform: translateY(-50%);
+  color: white;
+  white-space: nowrap; 
+  text-align: center;
+}
+
+.player-score {
+  position: absolute;
+  margin-right: 900px;
+  margin-top: 495px;
+  color: white;
+}
+.computer-score {
+  position: absolute;
+  margin-left: 900px;
+  margin-top: 450px;
+  color: white;
+}
+.reset-button {
+  position: absolute;
+  padding: 10px 20px;
+  font-size: 16px;
+  bottom: 0px;
+  cursor: pointer;
+  border: none;
+  background-color: #3498db;
+  color: black;
+}
+
+.reset-button:hover {
+  background-color: #2980b9;
+}
+
+.memory-game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+
+.memory-game {
+  background-color: #2c3e50;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.memory-game h2 {
+  margin-bottom: 20px;
+}
+
+.memory-game button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  margin-top: 20px;
+}
+
+.memory-game button:hover {
+  background-color: #2980b9;
+}
+
